@@ -25,8 +25,9 @@ spring:
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        
   type-aliases-package: com.atguigu.springcloud.entities    
-  mapper-locations:
-  - classpath: mybatis/mapper/**/*.xml                       
+  mapper-locations: 
+  - classpath: mybatis/mapper/**/*.xml
+                        
  
 eureka:
   client: 
@@ -74,4 +75,10 @@ eureka:
        defaultZone: http://eureka7001.com:7001/eureka  
   instance:
     instance-id: dept-8001.com
-    prefer-ip-address: true   
+    prefer-ip-address: true  
+
+info: 
+  app.name: atguigu-microservicecloud-springcloudconfig02
+  company.name: www.atguigu.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$   
